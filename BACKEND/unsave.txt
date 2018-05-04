@@ -1,0 +1,26 @@
+ if(validator.isEmail(req.body.email)) {
+        newUser.email = req.body.email;
+    }
+    if(validator.isLength(req.body.name, {
+        min : 1,
+        max : 8
+    })) {
+        newUser.name = req.body.name;
+        newUser.username = req.body.username;
+        newUser.address = req.body.address;
+    }
+
+    if(validator.isLength(req.body.name, {
+        min : 10,
+        max : 10
+    })) {
+
+        newUser.mobile = req.body.mobile;
+    }
+    
+    if(validator.isLength(req.body.name, {
+        min : 8,
+        max : 8
+    })) {
+        newUser.setPassword(req.body.password);
+    }
